@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97463F731CE1FEFD00233EF3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F721CE1FEFD00233EF3 /* SettingsViewController.swift */; };
+		97463F751CE1FFC200233EF3 /* FindPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F741CE1FFC200233EF3 /* FindPlaceViewController.swift */; };
+		97463F791CE200FC00233EF3 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F781CE200FC00233EF3 /* PlaceTableViewCell.swift */; };
+		97463F7B1CE203DF00233EF3 /* CityTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F7A1CE203DF00233EF3 /* CityTabBarViewController.swift */; };
+		97463F7D1CE2044700233EF3 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F7C1CE2044700233EF3 /* WeatherViewController.swift */; };
+		97463F7F1CE2047C00233EF3 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F7E1CE2047C00233EF3 /* GalleryViewController.swift */; };
+		97463F811CE205B200233EF3 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F801CE205B200233EF3 /* FlightsViewController.swift */; };
 		97FBDDF61CD808E200F6E118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FBDDF51CD808E200F6E118 /* AppDelegate.swift */; };
-		97FBDDF81CD808E200F6E118 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FBDDF71CD808E200F6E118 /* ViewController.swift */; };
+		97FBDDF81CD808E200F6E118 /* HappyPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FBDDF71CD808E200F6E118 /* HappyPlacesViewController.swift */; };
 		97FBDDFB1CD808E200F6E118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97FBDDF91CD808E200F6E118 /* Main.storyboard */; };
 		97FBDDFD1CD808E200F6E118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97FBDDFC1CD808E200F6E118 /* Assets.xcassets */; };
 		97FBDE001CD808E200F6E118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97FBDDFE1CD808E200F6E118 /* LaunchScreen.storyboard */; };
@@ -26,9 +33,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		97463F721CE1FEFD00233EF3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		97463F741CE1FFC200233EF3 /* FindPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPlaceViewController.swift; sourceTree = "<group>"; };
+		97463F781CE200FC00233EF3 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		97463F7A1CE203DF00233EF3 /* CityTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTabBarViewController.swift; sourceTree = "<group>"; };
+		97463F7C1CE2044700233EF3 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		97463F7E1CE2047C00233EF3 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		97463F801CE205B200233EF3 /* FlightsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
 		97FBDDF21CD808E200F6E118 /* TheETProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheETProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FBDDF51CD808E200F6E118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		97FBDDF71CD808E200F6E118 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		97FBDDF71CD808E200F6E118 /* HappyPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyPlacesViewController.swift; sourceTree = "<group>"; };
 		97FBDDFA1CD808E200F6E118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97FBDDFC1CD808E200F6E118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97FBDDFF1CD808E200F6E118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +70,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		97463F821CE2699B00233EF3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				97FBDDF71CD808E200F6E118 /* HappyPlacesViewController.swift */,
+				97463F741CE1FFC200233EF3 /* FindPlaceViewController.swift */,
+				97463F7A1CE203DF00233EF3 /* CityTabBarViewController.swift */,
+				97463F7C1CE2044700233EF3 /* WeatherViewController.swift */,
+				97463F7E1CE2047C00233EF3 /* GalleryViewController.swift */,
+				97463F801CE205B200233EF3 /* FlightsViewController.swift */,
+				97463F721CE1FEFD00233EF3 /* SettingsViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		97FBDDE91CD808E200F6E118 = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				97FBDDF51CD808E200F6E118 /* AppDelegate.swift */,
-				97FBDDF71CD808E200F6E118 /* ViewController.swift */,
+				97463F821CE2699B00233EF3 /* ViewControllers */,
+				97463F781CE200FC00233EF3 /* PlaceTableViewCell.swift */,
 				97FBDDF91CD808E200F6E118 /* Main.storyboard */,
 				97FBDDFC1CD808E200F6E118 /* Assets.xcassets */,
 				97FBDDFE1CD808E200F6E118 /* LaunchScreen.storyboard */,
@@ -197,8 +226,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97FBDDF81CD808E200F6E118 /* ViewController.swift in Sources */,
+				97463F811CE205B200233EF3 /* FlightsViewController.swift in Sources */,
+				97FBDDF81CD808E200F6E118 /* HappyPlacesViewController.swift in Sources */,
+				97463F7F1CE2047C00233EF3 /* GalleryViewController.swift in Sources */,
+				97463F7B1CE203DF00233EF3 /* CityTabBarViewController.swift in Sources */,
+				97463F751CE1FFC200233EF3 /* FindPlaceViewController.swift in Sources */,
 				97FBDDF61CD808E200F6E118 /* AppDelegate.swift in Sources */,
+				97463F7D1CE2044700233EF3 /* WeatherViewController.swift in Sources */,
+				97463F731CE1FEFD00233EF3 /* SettingsViewController.swift in Sources */,
+				97463F791CE200FC00233EF3 /* PlaceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +422,7 @@
 				97FBDE111CD808E200F6E118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97FBDE121CD808E200F6E118 /* Build configuration list for PBXNativeTarget "TheETProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -394,6 +431,7 @@
 				97FBDE141CD808E200F6E118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
