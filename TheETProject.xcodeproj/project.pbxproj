@@ -14,6 +14,8 @@
 		97463F7D1CE2044700233EF3 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F7C1CE2044700233EF3 /* WeatherViewController.swift */; };
 		97463F7F1CE2047C00233EF3 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F7E1CE2047C00233EF3 /* GalleryViewController.swift */; };
 		97463F811CE205B200233EF3 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F801CE205B200233EF3 /* FlightsViewController.swift */; };
+		97463F841CE3506A00233EF3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97463F831CE3506A00233EF3 /* MapKit.framework */; };
+		97463F861CE3507100233EF3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97463F851CE3507100233EF3 /* CoreLocation.framework */; };
 		97FBDDF61CD808E200F6E118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FBDDF51CD808E200F6E118 /* AppDelegate.swift */; };
 		97FBDDF81CD808E200F6E118 /* HappyPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FBDDF71CD808E200F6E118 /* HappyPlacesViewController.swift */; };
 		97FBDDFB1CD808E200F6E118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97FBDDF91CD808E200F6E118 /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 		97463F7C1CE2044700233EF3 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		97463F7E1CE2047C00233EF3 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		97463F801CE205B200233EF3 /* FlightsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
+		97463F831CE3506A00233EF3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		97463F851CE3507100233EF3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		97FBDDF21CD808E200F6E118 /* TheETProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheETProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FBDDF51CD808E200F6E118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97FBDDF71CD808E200F6E118 /* HappyPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyPlacesViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97463F861CE3507100233EF3 /* CoreLocation.framework in Frameworks */,
+				97463F841CE3506A00233EF3 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +96,8 @@
 				97FBDDF41CD808E200F6E118 /* TheETProject */,
 				97FBDE091CD808E200F6E118 /* TheETProjectTests */,
 				97FBDDF31CD808E200F6E118 /* Products */,
+				97463F851CE3507100233EF3 /* CoreLocation.framework */,
+				97463F831CE3506A00233EF3 /* MapKit.framework */,
 			);
 			sourceTree = "<group>";
 		};

@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Happy Places View Controller-->
@@ -222,34 +223,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIA-OJ-FJR">
-                                <rect key="frame" x="266.5" y="87" width="67.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where would you like to be right now?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIA-OJ-FJR">
+                                <rect key="frame" x="156" y="82" width="288" height="24.5"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uV0-qA-ff4">
-                                <rect key="frame" x="282" y="133" width="37" height="30"/>
-                                <state key="normal" title="Done"/>
-                                <connections>
-                                    <segue destination="ZUj-jM-gkn" kind="show" id="4ps-gZ-nHP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdO-Q8-S1J">
-                                <rect key="frame" x="20" y="20" width="39" height="30"/>
-                                <state key="normal" title="Close"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdO-Q8-S1J">
+                                <rect key="frame" x="20" y="31" width="14" height="22"/>
+                                <state key="normal" image="closeButton"/>
                                 <connections>
                                     <action selector="dismissViewController:" destination="ThU-UT-1x3" eventType="touchUpInside" id="H3R-3l-f3S"/>
                                     <action selector="dismissViewController:" destination="Nps-aI-2uM" eventType="touchUpInside" id="yNV-V1-Prh"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PHg-Bh-OP0">
+                                <rect key="frame" x="0.0" y="240" width="600" height="360"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Happy Places -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vk3-KG-G1A">
+                                <rect key="frame" x="228" y="28" width="144" height="29"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="24"/>
+                                <color key="textColor" red="0.9882352941176471" green="0.93333333333333335" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="dM2-lu-3xX">
+                                <rect key="frame" x="119.5" y="114.5" width="361" height="44"/>
+                                <color key="barTintColor" red="0.57647058819999997" green="0.83529411760000005" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="light" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.57647058823529407" green="0.83529411764705885" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="uV0-qA-ff4" firstAttribute="centerX" secondItem="bIA-OJ-FJR" secondAttribute="centerX" id="BXL-32-l1U"/>
-                            <constraint firstItem="bIA-OJ-FJR" firstAttribute="top" secondItem="Ch4-JA-33z" secondAttribute="bottom" constant="67" id="ehV-FT-2xY"/>
-                            <constraint firstItem="uV0-qA-ff4" firstAttribute="top" secondItem="bIA-OJ-FJR" secondAttribute="bottom" constant="25.5" id="ewy-Vq-XjU"/>
+                            <constraint firstItem="PHg-Bh-OP0" firstAttribute="leading" secondItem="ngV-Kj-jdm" secondAttribute="leading" id="0mi-Kg-tKt"/>
+                            <constraint firstItem="MdO-Q8-S1J" firstAttribute="centerY" secondItem="Vk3-KG-G1A" secondAttribute="centerY" id="40i-pl-B0x"/>
+                            <constraint firstItem="MdO-Q8-S1J" firstAttribute="leading" secondItem="ngV-Kj-jdm" secondAttribute="leadingMargin" id="H06-SK-D2l"/>
+                            <constraint firstItem="dM2-lu-3xX" firstAttribute="top" secondItem="bIA-OJ-FJR" secondAttribute="bottom" constant="8" id="IdE-1X-9rl"/>
+                            <constraint firstItem="Vk3-KG-G1A" firstAttribute="centerX" secondItem="ngV-Kj-jdm" secondAttribute="centerX" id="Rxv-5I-4Sl"/>
+                            <constraint firstItem="LAT-v1-ENM" firstAttribute="top" secondItem="PHg-Bh-OP0" secondAttribute="bottom" id="Suv-sq-fyY"/>
+                            <constraint firstItem="bIA-OJ-FJR" firstAttribute="top" secondItem="Vk3-KG-G1A" secondAttribute="bottom" constant="25" id="Unc-iQ-c5g"/>
+                            <constraint firstItem="Vk3-KG-G1A" firstAttribute="top" secondItem="Ch4-JA-33z" secondAttribute="bottom" constant="8" id="c2S-tK-3QX"/>
+                            <constraint firstItem="dM2-lu-3xX" firstAttribute="width" secondItem="ngV-Kj-jdm" secondAttribute="width" multiplier="0.6" constant="1" id="k8N-E6-4qT"/>
                             <constraint firstItem="bIA-OJ-FJR" firstAttribute="centerX" secondItem="ngV-Kj-jdm" secondAttribute="centerX" id="q3l-aL-E51"/>
+                            <constraint firstItem="dM2-lu-3xX" firstAttribute="centerX" secondItem="ngV-Kj-jdm" secondAttribute="centerX" id="t69-Id-UyS"/>
+                            <constraint firstItem="PHg-Bh-OP0" firstAttribute="height" secondItem="ngV-Kj-jdm" secondAttribute="height" multiplier="0.6" id="tnD-Eu-IoN"/>
+                            <constraint firstAttribute="trailing" secondItem="PHg-Bh-OP0" secondAttribute="trailing" id="tqb-Fu-Vyg"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -297,8 +318,10 @@
             <point key="canvasLocation" x="37" y="1188"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="closeButton" width="14" height="12"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Gc1-wB-uJu"/>
-        <segue reference="4ps-gZ-nHP"/>
     </inferredMetricsTieBreakers>
 </document>
