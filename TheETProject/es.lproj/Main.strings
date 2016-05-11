@@ -1,0 +1,69 @@
+
+/* Class = "UIButton"; normalTitle = "Settings"; ObjectID = "096-7K-XBm"; */
+"096-7K-XBm.normalTitle" = "Ajustes";
+
+/* Class = "UIButton"; normalTitle = "<---"; ObjectID = "1s4-3p-LyU"; */
+"1s4-3p-LyU.normalTitle" = "<---";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "32M-5T-acV"; */
+"32M-5T-acV.text" = "Ajustes";
+
+/* Class = "UIViewController"; title = "Weather"; ObjectID = "398-Sg-vua"; */
+"398-Sg-vua.title" = "El tiempo";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "Ca6-15-uNV"; */
+"Ca6-15-uNV.title" = "Item";
+
+/* Class = "UILabel"; text = "Flights"; ObjectID = "IOo-Rg-9mi"; */
+"IOo-Rg-9mi.text" = "Vuelos";
+
+/* Class = "UIButton"; normalTitle = "<---"; ObjectID = "IpW-ZR-XzQ"; */
+"IpW-ZR-XzQ.normalTitle" = "<---";
+
+/* Class = "UIButton"; normalTitle = "<---"; ObjectID = "VAA-IK-tiL"; */
+"VAA-IK-tiL.normalTitle" = "<---";
+
+/* Class = "UILabel"; text = "- Happy Places -"; ObjectID = "Vk3-KG-G1A"; */
+"Vk3-KG-G1A.text" = "- Happy Places -";
+
+/* Class = "UIButton"; normalTitle = "Close"; ObjectID = "Zlb-Qh-Bdw"; */
+"Zlb-Qh-Bdw.normalTitle" = "Close";
+
+/* Class = "UITabBarItem"; title = "Item 2"; ObjectID = "aTg-26-ZMk"; */
+"aTg-26-ZMk.title" = "Item 2";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "b2e-XO-AcL"; */
+"b2e-XO-AcL.title" = "Title";
+
+/* Class = "UILabel"; text = "Where would you like to be right now?"; ObjectID = "bIA-OJ-FJR"; */
+"bIA-OJ-FJR.text" = "¿Dónde te gustaría estar ahora mismo?";
+
+/* Class = "UIViewController"; title = "Gallery"; ObjectID = "bOz-Td-wBq"; */
+"bOz-Td-wBq.title" = "Galería";
+
+/* Class = "UILabel"; text = "Photo Gallery"; ObjectID = "cP2-Pm-tLX"; */
+"cP2-Pm-tLX.text" = "Galería de fotos";
+
+/* Class = "UISearchBar"; dM2-lu-3xX.scopeButtonTitles[0] = "Title"; ObjectID = "dM2-lu-3xX"; */
+"dM2-lu-3xX.scopeButtonTitles[0]" = "Title";
+
+/* Class = "UISearchBar"; dM2-lu-3xX.scopeButtonTitles[1] = "Title"; ObjectID = "dM2-lu-3xX"; */
+"dM2-lu-3xX.scopeButtonTitles[1]" = "Title";
+
+/* Class = "UILabel"; text = "Weather"; ObjectID = "dxF-UE-ruG"; */
+"dxF-UE-ruG.text" = "El tiempo";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "piZ-nR-Zmc"; */
+"piZ-nR-Zmc.title" = "Title";
+
+/* Class = "UIViewController"; title = "Flights"; ObjectID = "uBN-1M-DwU"; */
+"uBN-1M-DwU.title" = "Vuelos";
+
+/* Class = "UIButton"; normalTitle = "Add"; ObjectID = "uvi-Ey-nt4"; */
+"uvi-Ey-nt4.normalTitle" = "Añadir";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "vqh-lx-Y3s"; */
+"vqh-lx-Y3s.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "yOX-pd-eik"; */
+"yOX-pd-eik.title" = "Title";
