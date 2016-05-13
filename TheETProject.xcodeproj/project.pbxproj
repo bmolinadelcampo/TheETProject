@@ -16,6 +16,7 @@
 		97463F811CE205B200233EF3 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F801CE205B200233EF3 /* FlightsViewController.swift */; };
 		97463F841CE3506A00233EF3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97463F831CE3506A00233EF3 /* MapKit.framework */; };
 		97463F861CE3507100233EF3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97463F851CE3507100233EF3 /* CoreLocation.framework */; };
+		97463F8A1CE4DB2E00233EF3 /* LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F891CE4DB2E00233EF3 /* LocationSearchTableViewController.swift */; };
 		97FBDDF61CD808E200F6E118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FBDDF51CD808E200F6E118 /* AppDelegate.swift */; };
 		97FBDDF81CD808E200F6E118 /* HappyPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FBDDF71CD808E200F6E118 /* HappyPlacesViewController.swift */; };
 		97FBDDFB1CD808E200F6E118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97FBDDF91CD808E200F6E118 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		97463F851CE3507100233EF3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		97463F871CE378C600233EF3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		97463F881CE378C600233EF3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		97463F891CE4DB2E00233EF3 /* LocationSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationSearchTableViewController.swift; path = ../LocationSearchTableViewController.swift; sourceTree = "<group>"; };
 		97FBDDF21CD808E200F6E118 /* TheETProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheETProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FBDDF51CD808E200F6E118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97FBDDF71CD808E200F6E118 /* HappyPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyPlacesViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				97FBDDF51CD808E200F6E118 /* AppDelegate.swift */,
 				97463F821CE2699B00233EF3 /* ViewControllers */,
 				97463F781CE200FC00233EF3 /* PlaceTableViewCell.swift */,
+				97463F891CE4DB2E00233EF3 /* LocationSearchTableViewController.swift */,
 				97FBDDF91CD808E200F6E118 /* Main.storyboard */,
 				97FBDDFC1CD808E200F6E118 /* Assets.xcassets */,
 				97FBDDFE1CD808E200F6E118 /* LaunchScreen.storyboard */,
@@ -238,6 +241,7 @@
 			files = (
 				97463F811CE205B200233EF3 /* FlightsViewController.swift in Sources */,
 				97FBDDF81CD808E200F6E118 /* HappyPlacesViewController.swift in Sources */,
+				97463F8A1CE4DB2E00233EF3 /* LocationSearchTableViewController.swift in Sources */,
 				97463F7F1CE2047C00233EF3 /* GalleryViewController.swift in Sources */,
 				97463F7B1CE203DF00233EF3 /* CityTabBarViewController.swift in Sources */,
 				97463F751CE1FFC200233EF3 /* FindPlaceViewController.swift in Sources */,
