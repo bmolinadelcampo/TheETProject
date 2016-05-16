@@ -66,8 +66,9 @@ extension FindPlaceViewController: AddButtonDelegate {
         
         let addButton: UIButton = UIButton(frame: CGRectMake(150, 180, 100, 30))
         
-        addButton.backgroundColor = UIColor.redColor()
-        addButton.setTitle("Add", forState: UIControlState.Normal)
+        addButton.backgroundColor = UIColor(red:0.92, green:0.37, blue:0.36, alpha:1.00)
+        addButton.layer.cornerRadius = 8
+        addButton.setTitle("Go!", forState: UIControlState.Normal)
         addButton.tag = 1
         
         addButton.addTarget(self, action: "addButtonPressed", forControlEvents: UIControlEvents.TouchUpInside)

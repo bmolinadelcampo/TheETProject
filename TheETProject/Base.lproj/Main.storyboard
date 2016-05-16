@@ -173,7 +173,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.57647058823529407" green="0.83529411764705885" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dxF-UE-ruG" firstAttribute="leading" secondItem="8qh-Eu-Vgw" secondAttribute="leadingMargin" constant="255" id="16P-jU-2Qp"/>
                             <constraint firstItem="dxF-UE-ruG" firstAttribute="top" secondItem="nWi-dJ-J4m" secondAttribute="bottom" constant="73" id="NpN-bc-pHc"/>
@@ -420,6 +420,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YOv-96-iHv"/>
-        <segue reference="Gc1-wB-uJu"/>
+        <segue reference="vf6-8k-lvh"/>
     </inferredMetricsTieBreakers>
 </document>
