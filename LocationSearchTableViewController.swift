@@ -10,13 +10,19 @@ import UIKit
 import MapKit
 import CoreLocation
 
+protocol AddButtonDelegate {
+    
+    func showAddButton(selectedPlace: Place)
+    func removeAddButton()
+}
+
 class LocationSearchTableViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
 
     var matchingItems:[MKMapItem] = []
     var mapView: MKMapView? = nil
-    var selectedPlace: Place?
+    var delegate: AddButtonDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +33,21 @@ class LocationSearchTableViewController: UIViewController, UITableViewDataSource
     // MARK: - Table view data source
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if matchingItems.count == 0 {
+            
+            tableView.hidden = true
+            
+        } else {
+            
+            tableView.hidden = false
+        }
+        
         return matchingItems.count
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("resultCell", forIndexPath: indexPath) as! PlaceTableViewCell
 
         cell.configureCell(matchingItems[indexPath.row].placemark)
@@ -44,13 +61,14 @@ class LocationSearchTableViewController: UIViewController, UITableViewDataSource
 }
 
 
-extension LocationSearchTableViewController : UISearchBarDelegate {
+extension LocationSearchTableViewController: UISearchBarDelegate {
 
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText == "" {
             
             matchingItems = []
             tableView.reloadData()
+            delegate.removeAddButton()
             
         } else {
             
@@ -84,9 +102,14 @@ extension LocationSearchTableViewController : UISearchBarDelegate {
 extension LocationSearchTableViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! PlaceTableViewCell
         
-        selectedPlace = Place(placemark: cell.placemark)
+        let selectedPlace = Place(placemark: cell.placemark)
+        
+        tableView.hidden = true
+        
+        delegate.showAddButton(selectedPlace)
     }
-}
 
+}

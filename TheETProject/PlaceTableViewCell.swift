@@ -30,12 +30,12 @@ class PlaceTableViewCell: UITableViewCell {
     func configureCell(placemark: MKPlacemark) {
         if let name = placemark.locality {
             
-            nameLabel.text = name as? String
+            nameLabel.text = name
         }
         
         if let country = placemark.country {
             
-            countryLabel.text = country as? String
+            countryLabel.text = country
         }
         
         backgroundColor = UIColor.whiteColor()

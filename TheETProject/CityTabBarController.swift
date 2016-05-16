@@ -8,12 +8,18 @@
 
 import UIKit
 
-class CityTabBarViewController: UITabBarController {
+class CityTabBarController: UITabBarController {
 
+    var place: Place!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        for controller in self.viewControllers as! [ContentViewController] {
+            
+            controller.place = self.place
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FlightsViewController: UIViewController {
+class FlightsViewController: ContentViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

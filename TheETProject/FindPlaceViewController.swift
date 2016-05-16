@@ -15,7 +15,8 @@ class FindPlaceViewController: UIViewController  {
     @IBOutlet weak var citySearchBar: UISearchBar!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var containerView: UIView!
-
+    
+    var selectedPlace: Place?
     var tableViewController: LocationSearchTableViewController?
     
     override func viewDidLoad() {
@@ -40,13 +41,65 @@ class FindPlaceViewController: UIViewController  {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if segue.identifier == "embedTableView" {
             
             if let tableViewController = segue.destinationViewController as? LocationSearchTableViewController {
                 citySearchBar.delegate = tableViewController
                 tableViewController.mapView = mapView
+                tableViewController.delegate = self
             }
+        }
+        
+        if segue.identifier == "showPlaceInfo" {
+            
+            let destinationViewController = segue.destinationViewController as! CityTabBarController
+            destinationViewController.place = sender as! Place
         }
     }
 }
 
+extension FindPlaceViewController: AddButtonDelegate {
+    
+    
+    func showAddButton(selectedPlace: Place) {
+        
+        let addButton: UIButton = UIButton(frame: CGRectMake(150, 180, 100, 30))
+        
+        addButton.backgroundColor = UIColor.redColor()
+        addButton.setTitle("Add", forState: UIControlState.Normal)
+        addButton.tag = 1
+        
+        addButton.addTarget(self, action: "addButtonPressed", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.view.addSubview(addButton)
+        
+        self.selectedPlace = selectedPlace
+        citySearchBar.text = selectedPlace.name + ", " + selectedPlace.country
+
+    }
+    
+    func removeAddButton() {
+        
+        let subviews = self.view.subviews as [UIView]
+        
+        for view in subviews {
+            
+            if let button = view as? UIButton {
+                
+                if button.tag == 1 {
+                    
+                    button.removeFromSuperview()
+                }
+            }
+        }
+    }
+
+    func addButtonPressed() {
+        
+        print("Add")
+        if let selectedPlace = self.selectedPlace {
+            performSegueWithIdentifier("showPlaceInfo", sender: selectedPlace)
+        }
+    }
+}

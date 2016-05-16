@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		970D254E1CE9BEFA0046100B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970D254D1CE9BEFA0046100B /* Place.swift */; };
+		970D25521CE9F3AB0046100B /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970D25511CE9F3AB0046100B /* ContentViewController.swift */; };
 		97463F731CE1FEFD00233EF3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F721CE1FEFD00233EF3 /* SettingsViewController.swift */; };
 		97463F751CE1FFC200233EF3 /* FindPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F741CE1FFC200233EF3 /* FindPlaceViewController.swift */; };
 		97463F791CE200FC00233EF3 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F781CE200FC00233EF3 /* PlaceTableViewCell.swift */; };
-		97463F7B1CE203DF00233EF3 /* CityTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F7A1CE203DF00233EF3 /* CityTabBarViewController.swift */; };
+		97463F7B1CE203DF00233EF3 /* CityTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F7A1CE203DF00233EF3 /* CityTabBarController.swift */; };
 		97463F7D1CE2044700233EF3 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F7C1CE2044700233EF3 /* WeatherViewController.swift */; };
 		97463F7F1CE2047C00233EF3 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F7E1CE2047C00233EF3 /* GalleryViewController.swift */; };
 		97463F811CE205B200233EF3 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F801CE205B200233EF3 /* FlightsViewController.swift */; };
@@ -38,10 +39,11 @@
 
 /* Begin PBXFileReference section */
 		970D254D1CE9BEFA0046100B /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = ../Place.swift; sourceTree = "<group>"; };
+		970D25511CE9F3AB0046100B /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		97463F721CE1FEFD00233EF3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		97463F741CE1FFC200233EF3 /* FindPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPlaceViewController.swift; sourceTree = "<group>"; };
 		97463F781CE200FC00233EF3 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
-		97463F7A1CE203DF00233EF3 /* CityTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTabBarViewController.swift; sourceTree = "<group>"; };
+		97463F7A1CE203DF00233EF3 /* CityTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTabBarController.swift; sourceTree = "<group>"; };
 		97463F7C1CE2044700233EF3 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		97463F7E1CE2047C00233EF3 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		97463F801CE205B200233EF3 /* FlightsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +106,8 @@
 				97FBDDF71CD808E200F6E118 /* HappyPlacesViewController.swift */,
 				97463F741CE1FFC200233EF3 /* FindPlaceViewController.swift */,
 				97463F891CE4DB2E00233EF3 /* LocationSearchTableViewController.swift */,
-				97463F7A1CE203DF00233EF3 /* CityTabBarViewController.swift */,
+				97463F7A1CE203DF00233EF3 /* CityTabBarController.swift */,
+				970D25511CE9F3AB0046100B /* ContentViewController.swift */,
 				97463F7C1CE2044700233EF3 /* WeatherViewController.swift */,
 				97463F7E1CE2047C00233EF3 /* GalleryViewController.swift */,
 				97463F801CE205B200233EF3 /* FlightsViewController.swift */,
@@ -262,7 +265,8 @@
 				97FBDDF81CD808E200F6E118 /* HappyPlacesViewController.swift in Sources */,
 				97463F8A1CE4DB2E00233EF3 /* LocationSearchTableViewController.swift in Sources */,
 				97463F7F1CE2047C00233EF3 /* GalleryViewController.swift in Sources */,
-				97463F7B1CE203DF00233EF3 /* CityTabBarViewController.swift in Sources */,
+				970D25521CE9F3AB0046100B /* ContentViewController.swift in Sources */,
+				97463F7B1CE203DF00233EF3 /* CityTabBarController.swift in Sources */,
 				97463F751CE1FFC200233EF3 /* FindPlaceViewController.swift in Sources */,
 				97FBDDF61CD808E200F6E118 /* AppDelegate.swift in Sources */,
 				97463F7D1CE2044700233EF3 /* WeatherViewController.swift in Sources */,
