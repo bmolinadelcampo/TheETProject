@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		970D254E1CE9BEFA0046100B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970D254D1CE9BEFA0046100B /* Place.swift */; };
 		97463F731CE1FEFD00233EF3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F721CE1FEFD00233EF3 /* SettingsViewController.swift */; };
 		97463F751CE1FFC200233EF3 /* FindPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F741CE1FFC200233EF3 /* FindPlaceViewController.swift */; };
 		97463F791CE200FC00233EF3 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F781CE200FC00233EF3 /* PlaceTableViewCell.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		970D254D1CE9BEFA0046100B /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = ../Place.swift; sourceTree = "<group>"; };
 		97463F721CE1FEFD00233EF3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		97463F741CE1FFC200233EF3 /* FindPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPlaceViewController.swift; sourceTree = "<group>"; };
 		97463F781CE200FC00233EF3 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
@@ -80,11 +82,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		970D254F1CE9BF060046100B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				970D254D1CE9BEFA0046100B /* Place.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		970D25501CE9BF560046100B /* Custom cells */ = {
+			isa = PBXGroup;
+			children = (
+				97463F781CE200FC00233EF3 /* PlaceTableViewCell.swift */,
+			);
+			name = "Custom cells";
+			sourceTree = "<group>";
+		};
 		97463F821CE2699B00233EF3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				97FBDDF71CD808E200F6E118 /* HappyPlacesViewController.swift */,
 				97463F741CE1FFC200233EF3 /* FindPlaceViewController.swift */,
+				97463F891CE4DB2E00233EF3 /* LocationSearchTableViewController.swift */,
 				97463F7A1CE203DF00233EF3 /* CityTabBarViewController.swift */,
 				97463F7C1CE2044700233EF3 /* WeatherViewController.swift */,
 				97463F7E1CE2047C00233EF3 /* GalleryViewController.swift */,
@@ -119,8 +138,8 @@
 			children = (
 				97FBDDF51CD808E200F6E118 /* AppDelegate.swift */,
 				97463F821CE2699B00233EF3 /* ViewControllers */,
-				97463F781CE200FC00233EF3 /* PlaceTableViewCell.swift */,
-				97463F891CE4DB2E00233EF3 /* LocationSearchTableViewController.swift */,
+				970D254F1CE9BF060046100B /* Models */,
+				970D25501CE9BF560046100B /* Custom cells */,
 				97FBDDF91CD808E200F6E118 /* Main.storyboard */,
 				97FBDDFC1CD808E200F6E118 /* Assets.xcassets */,
 				97FBDDFE1CD808E200F6E118 /* LaunchScreen.storyboard */,
@@ -248,6 +267,7 @@
 				97FBDDF61CD808E200F6E118 /* AppDelegate.swift in Sources */,
 				97463F7D1CE2044700233EF3 /* WeatherViewController.swift in Sources */,
 				97463F731CE1FEFD00233EF3 /* SettingsViewController.swift in Sources */,
+				970D254E1CE9BEFA0046100B /* Place.swift in Sources */,
 				97463F791CE200FC00233EF3 /* PlaceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

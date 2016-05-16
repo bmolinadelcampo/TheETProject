@@ -10,18 +10,18 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class LocationSearchTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class LocationSearchTableViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
 
     var matchingItems:[MKMapItem] = []
     var mapView: MKMapView? = nil
+    var selectedPlace: Place?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.backgroundColor = UIColor.clearColor()
-        
+        configureTableView(tableView)
     }
 
     // MARK: - Table view data source
@@ -31,25 +31,21 @@ class LocationSearchTableViewController: UIViewController, UITableViewDataSource
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("resultCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("resultCell", forIndexPath: indexPath) as! PlaceTableViewCell
 
-        configureCell(cell, placemark: matchingItems[indexPath.row].placemark)
+        cell.configureCell(matchingItems[indexPath.row].placemark)
         return cell
     }
-
-    func configureCell(cell: UITableViewCell, placemark: CLPlacemark) {
-        cell.textLabel?.text = placemark.locality
-        cell.detailTextLabel?.text = placemark.country
-        cell.backgroundColor = UIColor.clearColor()
+    
+    func configureTableView(tableView: UITableView) {
+        tableView.backgroundColor = UIColor.clearColor()
+        tableView.separatorColor = UIColor(red:0.92, green:0.37, blue:0.36, alpha:1.00)
     }
 }
 
 
 extension LocationSearchTableViewController : UISearchBarDelegate {
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
 
-
-    }
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText == "" {
             
@@ -58,12 +54,10 @@ extension LocationSearchTableViewController : UISearchBarDelegate {
             
         } else {
             
-            guard let mapView = mapView,
-                let searchBarText = searchBar.text else { return }
+            guard let searchBarText = searchBar.text else { return }
             
             let request = MKLocalSearchRequest()
             request.naturalLanguageQuery = searchBarText
-            request.region = mapView.region
             
             let search = MKLocalSearch(request: request)
             
@@ -84,4 +78,15 @@ extension LocationSearchTableViewController : UISearchBarDelegate {
     func isCity(mapItem: MKMapItem) -> Bool {
         return mapItem.placemark.name == mapItem.placemark.locality
     }
+    
 }
+
+extension LocationSearchTableViewController: UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! PlaceTableViewCell
+        
+        selectedPlace = Place(placemark: cell.placemark)
+    }
+}
+
