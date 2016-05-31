@@ -11,28 +11,31 @@ import Foundation
 class Weather {
     
     var weatherDescription: String?
-    var temperature: String?
+    var temperature: Int?
     var iconString: String?
     var iconUrl: NSURL?
+    var localTime: NSDate?
     
-    func initWithDictionary(dictionary: [String: AnyObject]) {
+    init(dictionary: [String: AnyObject]) {
         
-        if let weatherDescription = dictionary["weather"] {
+        guard let currentConditionsDictionary = dictionary["current_observation"] else { return }
+        
+        if let weatherDescription = currentConditionsDictionary["weather"] {
             
             self.weatherDescription = weatherDescription as? String
         }
         
-        if let temperature = dictionary["temp_c"] {
+        if let temperature = currentConditionsDictionary["temp_c"] {
             
-            self.temperature = temperature as? String
+            self.temperature = temperature as? Int
         }
         
-        if let iconString = dictionary["icon"] {
+        if let iconString = currentConditionsDictionary["icon"] {
             
             self.iconString = iconString as? String
         }
         
-        if let iconUrl = dictionary["icon_url"] as? String {
+        if let iconUrl = currentConditionsDictionary["icon_url"] as? String {
             
             self.iconUrl = NSURL(string: iconUrl)
         }

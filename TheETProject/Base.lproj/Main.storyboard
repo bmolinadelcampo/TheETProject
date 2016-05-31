@@ -314,7 +314,7 @@
                             <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="dM2-lu-3xX">
                                 <rect key="frame" x="119" y="114" width="361" height="44"/>
                                 <color key="barTintColor" red="0.57647058819999997" green="0.83529411760000005" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="light" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="alphabet" keyboardAppearance="light"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
                                     <string>Title</string>

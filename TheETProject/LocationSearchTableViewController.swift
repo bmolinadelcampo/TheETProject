@@ -20,14 +20,17 @@ class LocationSearchTableViewController: UIViewController, UITableViewDataSource
     
     @IBOutlet weak var tableView: UITableView!
 
-    var matchingItems:[MKMapItem] = []
+    var matchingItems:[Place] = []
     var mapView: MKMapView? = nil
     var delegate: AddButtonDelegate!
+    var apiController: WeatherApiController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureTableView(tableView)
+        
+        apiController = WeatherApiController()
     }
 
     // MARK: - Table view data source
@@ -50,11 +53,12 @@ class LocationSearchTableViewController: UIViewController, UITableViewDataSource
         
         let cell = tableView.dequeueReusableCellWithIdentifier("resultCell", forIndexPath: indexPath) as! PlaceTableViewCell
 
-        cell.configureCell(matchingItems[indexPath.row].placemark)
+        cell.configureCell(matchingItems[indexPath.row])
         return cell
     }
     
     func configureTableView(tableView: UITableView) {
+        
         tableView.backgroundColor = UIColor.clearColor()
         tableView.separatorColor = UIColor(red:0.92, green:0.37, blue:0.36, alpha:1.00)
     }
@@ -62,9 +66,10 @@ class LocationSearchTableViewController: UIViewController, UITableViewDataSource
 
 
 extension LocationSearchTableViewController: UISearchBarDelegate {
-
+    
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText == "" {
+        
+        if searchText.characters.count < 3 {
             
             matchingItems = []
             tableView.reloadData()
@@ -72,31 +77,21 @@ extension LocationSearchTableViewController: UISearchBarDelegate {
             
         } else {
             
-            guard let searchBarText = searchBar.text else { return }
-            
-            let request = MKLocalSearchRequest()
-            request.naturalLanguageQuery = searchBarText
-            
-            let search = MKLocalSearch(request: request)
-            
-            search.startWithCompletionHandler { response, _ in
-              
-                guard let response = response else {
-                    return
+            apiController?.autocompletePlaceNameForString(searchText, completion: { (suggestedPlaces) -> Void in
+                
+                if let suggestedPlaces = suggestedPlaces {
+                    
+                    self.matchingItems = suggestedPlaces
+                    
+                    dispatch_async(dispatch_get_main_queue()) { [unowned self] in
+                        
+                        self.tableView.reloadData()
+                        
+                    }
                 }
-                print("There are \(response.mapItems.count) matching items")
-
-                self.matchingItems = response.mapItems.filter(self.isCity)
-                print("Matching items are: \(self.matchingItems)")
-                self.tableView.reloadData()
-            }
+            })
         }
     }
-    
-    func isCity(mapItem: MKMapItem) -> Bool {
-        return mapItem.placemark.name == mapItem.placemark.locality
-    }
-    
 }
 
 extension LocationSearchTableViewController: UITableViewDelegate {
@@ -105,7 +100,7 @@ extension LocationSearchTableViewController: UITableViewDelegate {
         
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! PlaceTableViewCell
         
-        let selectedPlace = Place(placemark: cell.placemark)
+        let selectedPlace = cell.place
         
         tableView.hidden = true
         

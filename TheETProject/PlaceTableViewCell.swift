@@ -14,7 +14,7 @@ class PlaceTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
     
-    var placemark: MKPlacemark!
+    var place: Place!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,20 +27,21 @@ class PlaceTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func configureCell(placemark: MKPlacemark) {
-        if let name = placemark.locality {
+    func configureCell(place: Place) {
+        
+        if let name = place.name {
             
             nameLabel.text = name
         }
         
-        if let country = placemark.country {
+        if let country = place.country {
             
             countryLabel.text = country
         }
         
         backgroundColor = UIColor.whiteColor()
         
-        self.placemark = placemark
+        self.place = place
     }
 
 }

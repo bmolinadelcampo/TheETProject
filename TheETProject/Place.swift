@@ -17,26 +17,40 @@ class Place {
     var location: CLLocation!
     var timeZone: NSTimeZone!
     
-    init(placemark: MKPlacemark) {
-        
-        if let name = placemark.locality {
+    class func isCity(dictionary: [String: AnyObject]) -> Bool
+    {
+        if let placeName = dictionary["name"] as? String where placeName.rangeOfString(",") != nil {
             
-            self.name = name
+            return true
         }
         
-        if let country = placemark.country {
+        return false
+    }
+    
+    
+    init(dictionary: [String: AnyObject]) {
+        
+        if let nameAndCountry = dictionary["name"] {
             
-            self.country = country
+            let nameCountryArray = nameAndCountry.componentsSeparatedByString(", ")
+            
+            if nameCountryArray.count == 2 {
+                
+                self.name = nameCountryArray[0]
+                self.country = nameCountryArray[1]
+                
+            }
         }
         
-        if let location = placemark.location {
+        if let latitudeString = dictionary["lat"] as? String, longitudeString = dictionary["lon"] as? String,
+        latitude = Double(latitudeString), longitude = Double(longitudeString) {
             
-            self.location = location
+            self.location = CLLocation(latitude: latitude, longitude: longitude)
         }
         
-        if let timeZone = placemark.timeZone {
+        if let timeZone = dictionary["tz"] as? String {
             
-            self.timeZone = timeZone
+            self.timeZone = NSTimeZone(name: timeZone)
         }
     }
 }
