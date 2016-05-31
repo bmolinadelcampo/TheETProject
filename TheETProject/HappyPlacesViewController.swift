@@ -10,16 +10,35 @@ import UIKit
 
 class HappyPlacesViewController: UIViewController {
 
+    var placesArray: [HappyPlace]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        fetchHappyPlaces()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func fetchHappyPlaces() {
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        var results: [HappyPlace]?
+        
+        managedContext.performBlockAndWait { () -> Void in
+            
+            do {
+                
+                results = try managedContext.executeFetchRequest(HappyPlace.fetchAllHappyPlaces()) as? [HappyPlace]
+                
+            } catch {
+                
+                print("mohón")
+            }
+        }
+        
+        placesArray = results
     }
-
-
 }
 

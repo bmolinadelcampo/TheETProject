@@ -12,10 +12,10 @@ import CoreLocation
 
 class Place {
     
-    var name: String!
-    var country: String!
-    var location: CLLocation!
-    var timeZone: NSTimeZone!
+    var name: String?
+    var country: String?
+    var location: CLLocation?
+    var timeZone: NSTimeZone?
     
     class func isCity(dictionary: [String: AnyObject]) -> Bool
     {
@@ -29,7 +29,7 @@ class Place {
     
     
     init(dictionary: [String: AnyObject]) {
-        
+                
         if let nameAndCountry = dictionary["name"] {
             
             let nameCountryArray = nameAndCountry.componentsSeparatedByString(", ")
@@ -53,4 +53,5 @@ class Place {
             self.timeZone = NSTimeZone(name: timeZone)
         }
     }
+    
 }

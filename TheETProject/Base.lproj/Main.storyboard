@@ -321,7 +321,7 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <containerView opaque="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tgn-4G-eFr">
-                                <rect key="frame" x="119" y="158" width="361" height="82"/>
+                                <rect key="frame" x="119" y="158" width="361" height="132"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="Kk1-2Y-kec" kind="embed" identifier="embedTableView" id="ueN-B4-qhj"/>
@@ -342,7 +342,7 @@
                             <constraint firstItem="bIA-OJ-FJR" firstAttribute="top" secondItem="Vk3-KG-G1A" secondAttribute="bottom" constant="25" id="Unc-iQ-c5g"/>
                             <constraint firstItem="Vk3-KG-G1A" firstAttribute="top" secondItem="Ch4-JA-33z" secondAttribute="bottom" constant="8" id="c2S-tK-3QX"/>
                             <constraint firstItem="dM2-lu-3xX" firstAttribute="width" secondItem="ngV-Kj-jdm" secondAttribute="width" multiplier="0.6" constant="1" id="k8N-E6-4qT"/>
-                            <constraint firstItem="PHg-Bh-OP0" firstAttribute="top" secondItem="Tgn-4G-eFr" secondAttribute="bottom" id="pYM-Xa-Q8c"/>
+                            <constraint firstItem="PHg-Bh-OP0" firstAttribute="top" secondItem="Tgn-4G-eFr" secondAttribute="bottom" constant="-50" id="pYM-Xa-Q8c"/>
                             <constraint firstItem="bIA-OJ-FJR" firstAttribute="centerX" secondItem="ngV-Kj-jdm" secondAttribute="centerX" id="q3l-aL-E51"/>
                             <constraint firstItem="dM2-lu-3xX" firstAttribute="centerX" secondItem="ngV-Kj-jdm" secondAttribute="centerX" id="t69-Id-UyS"/>
                             <constraint firstItem="PHg-Bh-OP0" firstAttribute="height" secondItem="ngV-Kj-jdm" secondAttribute="height" multiplier="0.6" id="tnD-Eu-IoN"/>
@@ -408,11 +408,11 @@
                         <viewControllerLayoutGuide type="bottom" id="G5a-QF-F5d"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oNq-q6-lxT">
-                        <rect key="frame" x="0.0" y="0.0" width="361" height="82"/>
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="132"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UgV-8L-e30">
-                                <rect key="frame" x="0.0" y="0.0" width="361" height="82"/>
+                                <rect key="frame" x="0.0" y="0.0" width="361" height="132"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="resultCell" id="bH8-zk-4Ni" customClass="PlaceTableViewCell" customModule="TheETProject" customModuleProvider="target">

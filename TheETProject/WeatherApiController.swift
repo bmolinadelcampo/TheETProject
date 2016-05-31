@@ -116,7 +116,10 @@ class WeatherApiController {
                 
                 for placeDictionary: [String: AnyObject] in (json["RESULTS"] as? [[String: AnyObject]])!
                 {
-                    suggestedPlacesArray.append(Place(dictionary: placeDictionary))
+                    if Place.isCity(placeDictionary) {
+                        
+                        suggestedPlacesArray.append(Place(dictionary: placeDictionary))
+                    }
                 }
                 
                 return suggestedPlacesArray

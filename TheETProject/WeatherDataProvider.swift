@@ -23,7 +23,7 @@ class WeatherDataProvider
         
         print(dateFormatter.timeZone.name)
         dateFormatter.timeZone = place.timeZone
-        dateFormatter.dateFormat = "hh:mm"
+        dateFormatter.dateFormat = "hh:mm a"
     }
     
     func formatWeatherDescription() -> String?
@@ -43,7 +43,7 @@ class WeatherDataProvider
     
     func formatPlace() -> String?
     {
-        return place.name + ", " + place.country
+        return place.name! + ", " + place.country!
     }
     
     func formatLocalTime() -> String?

@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
 
 class FindPlaceViewController: UIViewController  {
     
@@ -76,7 +77,7 @@ extension FindPlaceViewController: AddButtonDelegate {
         self.view.addSubview(addButton)
         
         self.selectedPlace = selectedPlace
-        citySearchBar.text = selectedPlace.name + ", " + selectedPlace.country
+        citySearchBar.text = selectedPlace.name! + ", " + selectedPlace.country!
 
     }
     
@@ -100,7 +101,60 @@ extension FindPlaceViewController: AddButtonDelegate {
         
         print("Add")
         if let selectedPlace = self.selectedPlace {
+            
+            saveHappyPlace(selectedPlace)
             performSegueWithIdentifier("showPlaceInfo", sender: selectedPlace)
         }
     }
+    
+    func saveHappyPlace(place: Place) {
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        var storedPlace: HappyPlace?
+        
+        managedContext.performBlockAndWait { () -> Void in
+            
+            if let latitude = place.location?.coordinate.latitude, longitude = place.location?.coordinate.longitude
+            {
+                do {
+                    
+                    storedPlace = (try managedContext.executeFetchRequest(HappyPlace.fetchHappyPlaceWithLocation(latitude, longitude: longitude)) as? [HappyPlace])?.first
+                    
+                    
+                } catch {
+                    
+                    print("There was an error fetching the selected place from coredata")
+                }
+            }
+        }
+        
+        if storedPlace == nil {
+            
+            let entity = NSEntityDescription.entityForName("HappyPlace", inManagedObjectContext: managedContext)
+            
+            if let happyPlace = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext) as? HappyPlace {
+                
+                happyPlace.name = place.name
+                happyPlace.country = place.country
+                
+                happyPlace.latitude = place.location?.coordinate.latitude
+                happyPlace.longitude = place.location?.coordinate.longitude
+                
+                happyPlace.timeZoneName = place.timeZone?.name
+            }
+            
+            do {
+                
+                try managedContext.save()
+                
+            } catch {
+                
+                print("Unable to save")
+            }
+        }
+    }
 }
+

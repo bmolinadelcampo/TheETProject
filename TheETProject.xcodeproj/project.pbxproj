@@ -22,6 +22,10 @@
 		979D414A1CF5B13B001B596C /* LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979D41491CF5B13B001B596C /* LocationSearchTableViewController.swift */; };
 		979D414C1CF5B148001B596C /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979D414B1CF5B148001B596C /* Place.swift */; };
 		979D41511CF5C1A2001B596C /* WeatherDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979D41501CF5C1A2001B596C /* WeatherDataProvider.swift */; };
+		97E168801CFDDF6E00CFC6DF /* TheETProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 97E1687E1CFDDF6E00CFC6DF /* TheETProject.xcdatamodeld */; };
+		97E1688C1CFDE5D100CFC6DF /* HappyPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1688A1CFDE5D100CFC6DF /* HappyPlace.swift */; };
+		97E1688D1CFDE5D100CFC6DF /* HappyPlace+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1688B1CFDE5D100CFC6DF /* HappyPlace+CoreDataProperties.swift */; };
+		97E1688F1CFDEA1C00CFC6DF /* HappyPlace+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1688E1CFDEA1C00CFC6DF /* HappyPlace+Store.swift */; };
 		97FBDDF61CD808E200F6E118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FBDDF51CD808E200F6E118 /* AppDelegate.swift */; };
 		97FBDDF81CD808E200F6E118 /* HappyPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FBDDF71CD808E200F6E118 /* HappyPlacesViewController.swift */; };
 		97FBDDFB1CD808E200F6E118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97FBDDF91CD808E200F6E118 /* Main.storyboard */; };
@@ -58,6 +62,10 @@
 		979D41491CF5B13B001B596C /* LocationSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewController.swift; sourceTree = "<group>"; };
 		979D414B1CF5B148001B596C /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		979D41501CF5C1A2001B596C /* WeatherDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDataProvider.swift; sourceTree = "<group>"; };
+		97E1687F1CFDDF6E00CFC6DF /* TheETProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheETProject.xcdatamodel; sourceTree = "<group>"; };
+		97E1688A1CFDE5D100CFC6DF /* HappyPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HappyPlace.swift; path = TheETProject/HappyPlace.swift; sourceTree = "<group>"; };
+		97E1688B1CFDE5D100CFC6DF /* HappyPlace+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HappyPlace+CoreDataProperties.swift"; path = "TheETProject/HappyPlace+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		97E1688E1CFDEA1C00CFC6DF /* HappyPlace+Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HappyPlace+Store.swift"; path = "TheETProject/HappyPlace+Store.swift"; sourceTree = "<group>"; };
 		97FBDDF21CD808E200F6E118 /* TheETProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheETProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FBDDF51CD808E200F6E118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97FBDDF71CD808E200F6E118 /* HappyPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyPlacesViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +147,17 @@
 			name = "Data Providers";
 			sourceTree = "<group>";
 		};
+		97E168891CFDE52F00CFC6DF /* CoreData Models */ = {
+			isa = PBXGroup;
+			children = (
+				97E1688A1CFDE5D100CFC6DF /* HappyPlace.swift */,
+				97E1688B1CFDE5D100CFC6DF /* HappyPlace+CoreDataProperties.swift */,
+				97E1688E1CFDEA1C00CFC6DF /* HappyPlace+Store.swift */,
+			);
+			name = "CoreData Models";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		97FBDDE91CD808E200F6E118 = {
 			isa = PBXGroup;
 			children = (
@@ -163,7 +182,9 @@
 			isa = PBXGroup;
 			children = (
 				97FBDDF51CD808E200F6E118 /* AppDelegate.swift */,
+				97E1687E1CFDDF6E00CFC6DF /* TheETProject.xcdatamodeld */,
 				97463F821CE2699B00233EF3 /* View Controllers */,
+				97E168891CFDE52F00CFC6DF /* CoreData Models */,
 				970D254F1CE9BF060046100B /* Models */,
 				970D25551CEB2B9E0046100B /* Api Controllers */,
 				979D41521CF5C55C001B596C /* Data Providers */,
@@ -289,6 +310,7 @@
 			files = (
 				97463F811CE205B200233EF3 /* FlightsViewController.swift in Sources */,
 				97FBDDF81CD808E200F6E118 /* HappyPlacesViewController.swift in Sources */,
+				97E168801CFDDF6E00CFC6DF /* TheETProject.xcdatamodeld in Sources */,
 				970D25541CEB2B930046100B /* WeatherApiController.swift in Sources */,
 				979D41511CF5C1A2001B596C /* WeatherDataProvider.swift in Sources */,
 				97463F7F1CE2047C00233EF3 /* GalleryViewController.swift in Sources */,
@@ -299,8 +321,11 @@
 				97463F7B1CE203DF00233EF3 /* CityTabBarController.swift in Sources */,
 				97463F751CE1FFC200233EF3 /* FindPlaceViewController.swift in Sources */,
 				97FBDDF61CD808E200F6E118 /* AppDelegate.swift in Sources */,
+				97E1688F1CFDEA1C00CFC6DF /* HappyPlace+Store.swift in Sources */,
 				97463F7D1CE2044700233EF3 /* WeatherViewController.swift in Sources */,
+				97E1688C1CFDE5D100CFC6DF /* HappyPlace.swift in Sources */,
 				97463F731CE1FEFD00233EF3 /* SettingsViewController.swift in Sources */,
+				97E1688D1CFDE5D100CFC6DF /* HappyPlace+CoreDataProperties.swift in Sources */,
 				97463F791CE200FC00233EF3 /* PlaceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +530,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		97E1687E1CFDDF6E00CFC6DF /* TheETProject.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				97E1687F1CFDDF6E00CFC6DF /* TheETProject.xcdatamodel */,
+			);
+			currentVersion = 97E1687F1CFDDF6E00CFC6DF /* TheETProject.xcdatamodel */;
+			path = TheETProject.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 97FBDDEA1CD808E200F6E118 /* Project object */;
 }
