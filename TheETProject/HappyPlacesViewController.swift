@@ -34,11 +34,56 @@ class HappyPlacesViewController: UIViewController {
                 
             } catch {
                 
-                print("mohón")
+                print("Error: Could not execute fetch request - fetchHappyPlaces()")
             }
         }
         
         placesArray = results
     }
+    
+        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "showContentForHappyPlace" {
+            
+            let destinationViewController = segue.destinationViewController as! CityTabBarController
+            destinationViewController.place = sender as! HappyPlace
+        }
+    }
 }
 
+extension HappyPlacesViewController: UITableViewDataSource {
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if let placesArray = placesArray {
+            
+            return placesArray.count
+        }
+        return 0
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("happyPlaceCell") as! HappyPlacesTableViewCell
+        
+        if let place = placesArray?[indexPath.row] {
+            
+            cell.configureCell(place)
+        }
+        
+        return cell
+    }
+}
+
+extension HappyPlacesViewController: UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! HappyPlacesTableViewCell
+        
+        let selectedPlace = cell.place
+        
+        performSegueWithIdentifier("showContentForHappyPlace", sender: selectedPlace)
+        
+    }
+}

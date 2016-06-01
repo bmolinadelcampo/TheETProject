@@ -49,7 +49,6 @@ class WeatherViewController: ContentViewController {
                 self.populateLabels()
             }
         }
-
     }
     
     func populateLabels()

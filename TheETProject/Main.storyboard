@@ -20,22 +20,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t7u-7c-WSH">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t7u-7c-WSH">
                                 <rect key="frame" x="0.0" y="20" width="600" height="446"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="placeCell" id="uDu-PI-xan" customClass="PlaceTableViewCell" customModule="TheETProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="happyPlaceCell" rowHeight="73" id="uDu-PI-xan" customClass="HappyPlacesTableViewCell" customModule="TheETProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uDu-PI-xan" id="hCn-y3-YpV">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="72.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvw-JV-frU">
+                                                    <rect key="frame" x="31" y="16" width="45" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50N-4r-x2E">
+                                                    <rect key="frame" x="31" y="40.5" width="61.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xvw-JV-frU" firstAttribute="leading" secondItem="hCn-y3-YpV" secondAttribute="leadingMargin" constant="23" id="OHM-gB-Fi2"/>
+                                                <constraint firstItem="xvw-JV-frU" firstAttribute="top" secondItem="hCn-y3-YpV" secondAttribute="topMargin" constant="8" id="cXz-C4-E2O"/>
+                                                <constraint firstItem="50N-4r-x2E" firstAttribute="leading" secondItem="xvw-JV-frU" secondAttribute="leading" id="qco-Gx-7FZ"/>
+                                                <constraint firstItem="50N-4r-x2E" firstAttribute="top" secondItem="xvw-JV-frU" secondAttribute="bottom" constant="4" id="ynf-pB-7eq"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ZUj-jM-gkn" kind="show" id="QEk-DP-3J3"/>
+                                            <outlet property="countryLabel" destination="50N-4r-x2E" id="UyJ-gy-FgG"/>
+                                            <outlet property="nameLabel" destination="xvw-JV-frU" id="OHK-fM-6Ax"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pHx-3S-Q2i"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ERm-is-XZ9"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="096-7K-XBm">
                                 <rect key="frame" x="40" y="496" width="57" height="30"/>
@@ -65,10 +90,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fA2-PN-SnL"/>
+                    <connections>
+                        <segue destination="ZUj-jM-gkn" kind="show" identifier="showContentForHappyPlace" id="pGn-Lc-Kp3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37" y="327"/>
+            <point key="canvasLocation" x="73" y="303"/>
         </scene>
         <!--Gallery-->
         <scene sceneID="x5Z-Wp-9Ka">
@@ -258,6 +286,7 @@
         <scene sceneID="9QM-oP-eCf">
             <objects>
                 <tabBarController id="ZUj-jM-gkn" customClass="CityTabBarController" customModule="TheETProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JwK-G4-ynC"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="EbF-Sk-cix">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -482,7 +511,7 @@
         <image name="closeButton" width="14" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="pGn-Lc-Kp3"/>
         <segue reference="vf6-8k-lvh"/>
-        <segue reference="YOv-96-iHv"/>
     </inferredMetricsTieBreakers>
 </document>

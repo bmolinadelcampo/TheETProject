@@ -60,7 +60,7 @@ class WeatherApiController {
         
     }
     
-    func fetchTodayWeatherConditionsForPlace(place: Place, completion: (weather: Weather?) -> Void)
+    func fetchTodayWeatherConditionsForPlace(place: HappyPlace, completion: (weather: Weather?) -> Void)
     {
         guard let url = composeUrlForPlace(place)
             else
@@ -91,17 +91,24 @@ class WeatherApiController {
     
     // MARK - Compose url methods
     
-    private func composeUrlForPlace(place: Place) -> NSURL?
+    private func composeUrlForPlace(place: HappyPlace) -> NSURL?
     {
         let featureString = "conditions"
-        let queryString = "q/\(place.country)/\(place.name)"
-        let formatString = ".json"
         
-        let fullQueryString = queryString + formatString
+        if let country = place.country, name = place.name {
+            
+            let queryString = "q/\(country)/\(name)"
+            let formatString = ".json"
+            
+            let fullQueryString = queryString + formatString
+            
+            let url = NSURL(string: apiUrl)?.URLByAppendingPathComponent(apiKey).URLByAppendingPathComponent(featureString).URLByAppendingPathComponent(fullQueryString)
+            
+            return url
+        }
         
-        let url = NSURL(string: apiUrl)?.URLByAppendingPathComponent(apiKey).URLByAppendingPathComponent(featureString).URLByAppendingPathComponent(fullQueryString)
-        
-        return url
+        return nil
+
     }
     
     
@@ -151,7 +158,6 @@ class WeatherApiController {
         }
         
         return nil
-
     }
     
 }

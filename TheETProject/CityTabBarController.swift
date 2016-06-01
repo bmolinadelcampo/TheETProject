@@ -10,7 +10,7 @@ import UIKit
 
 class CityTabBarController: UITabBarController {
 
-    var place: Place!
+    var place: HappyPlace!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -10,6 +10,6 @@ import UIKit
 
 class ContentViewController: UIViewController {
 
-    var place: Place!
+    var place: HappyPlace!
     
 }

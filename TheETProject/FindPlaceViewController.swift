@@ -55,7 +55,7 @@ class FindPlaceViewController: UIViewController  {
         if segue.identifier == "showPlaceInfo" {
             
             let destinationViewController = segue.destinationViewController as! CityTabBarController
-            destinationViewController.place = sender as! Place
+            destinationViewController.place = sender as! HappyPlace
         }
     }
 }
@@ -102,12 +102,11 @@ extension FindPlaceViewController: AddButtonDelegate {
         print("Add")
         if let selectedPlace = self.selectedPlace {
             
-            saveHappyPlace(selectedPlace)
-            performSegueWithIdentifier("showPlaceInfo", sender: selectedPlace)
+            performSegueWithIdentifier("showPlaceInfo", sender: saveHappyPlace(selectedPlace))
         }
     }
     
-    func saveHappyPlace(place: Place) {
+    func saveHappyPlace(place: Place) -> HappyPlace? {
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
@@ -131,19 +130,24 @@ extension FindPlaceViewController: AddButtonDelegate {
             }
         }
         
+        var selectedHappyPlace: HappyPlace?
+        
         if storedPlace == nil {
             
             let entity = NSEntityDescription.entityForName("HappyPlace", inManagedObjectContext: managedContext)
             
-            if let happyPlace = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext) as? HappyPlace {
+            if let newHappyPlace = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext) as? HappyPlace {
                 
-                happyPlace.name = place.name
-                happyPlace.country = place.country
+                newHappyPlace.name = place.name
+                newHappyPlace.country = place.country
                 
-                happyPlace.latitude = place.location?.coordinate.latitude
-                happyPlace.longitude = place.location?.coordinate.longitude
+                newHappyPlace.latitude = place.location?.coordinate.latitude
+                newHappyPlace.longitude = place.location?.coordinate.longitude
                 
-                happyPlace.timeZoneName = place.timeZone?.name
+                newHappyPlace.timeZoneName = place.timeZone?.name
+                
+                selectedHappyPlace = newHappyPlace
+                
             }
             
             do {
@@ -153,8 +157,15 @@ extension FindPlaceViewController: AddButtonDelegate {
             } catch {
                 
                 print("Unable to save")
+                return nil
             }
+            
+        } else {
+            
+            selectedHappyPlace = storedPlace!
         }
+        
+        return selectedHappyPlace
     }
 }
 

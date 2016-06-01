@@ -19,6 +19,7 @@
 		97463F811CE205B200233EF3 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97463F801CE205B200233EF3 /* FlightsViewController.swift */; };
 		97463F841CE3506A00233EF3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97463F831CE3506A00233EF3 /* MapKit.framework */; };
 		97463F861CE3507100233EF3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97463F851CE3507100233EF3 /* CoreLocation.framework */; };
+		975E2B171CFF25D5002DA868 /* HappyPlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975E2B161CFF25D5002DA868 /* HappyPlacesTableViewCell.swift */; };
 		979D414A1CF5B13B001B596C /* LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979D41491CF5B13B001B596C /* LocationSearchTableViewController.swift */; };
 		979D414C1CF5B148001B596C /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979D414B1CF5B148001B596C /* Place.swift */; };
 		979D41511CF5C1A2001B596C /* WeatherDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979D41501CF5C1A2001B596C /* WeatherDataProvider.swift */; };
@@ -26,9 +27,9 @@
 		97E1688C1CFDE5D100CFC6DF /* HappyPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1688A1CFDE5D100CFC6DF /* HappyPlace.swift */; };
 		97E1688D1CFDE5D100CFC6DF /* HappyPlace+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1688B1CFDE5D100CFC6DF /* HappyPlace+CoreDataProperties.swift */; };
 		97E1688F1CFDEA1C00CFC6DF /* HappyPlace+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1688E1CFDEA1C00CFC6DF /* HappyPlace+Store.swift */; };
+		97E176E61CFF31F400153B8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97E176E51CFF31F400153B8C /* Main.storyboard */; };
 		97FBDDF61CD808E200F6E118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FBDDF51CD808E200F6E118 /* AppDelegate.swift */; };
 		97FBDDF81CD808E200F6E118 /* HappyPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FBDDF71CD808E200F6E118 /* HappyPlacesViewController.swift */; };
-		97FBDDFB1CD808E200F6E118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97FBDDF91CD808E200F6E118 /* Main.storyboard */; };
 		97FBDDFD1CD808E200F6E118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97FBDDFC1CD808E200F6E118 /* Assets.xcassets */; };
 		97FBDE001CD808E200F6E118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97FBDDFE1CD808E200F6E118 /* LaunchScreen.storyboard */; };
 		97FBDE0B1CD808E200F6E118 /* TheETProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FBDE0A1CD808E200F6E118 /* TheETProjectTests.swift */; };
@@ -57,8 +58,8 @@
 		97463F801CE205B200233EF3 /* FlightsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
 		97463F831CE3506A00233EF3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		97463F851CE3507100233EF3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		97463F871CE378C600233EF3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		97463F881CE378C600233EF3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		975E2B161CFF25D5002DA868 /* HappyPlacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappyPlacesTableViewCell.swift; sourceTree = "<group>"; };
 		979D41491CF5B13B001B596C /* LocationSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewController.swift; sourceTree = "<group>"; };
 		979D414B1CF5B148001B596C /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		979D41501CF5C1A2001B596C /* WeatherDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDataProvider.swift; sourceTree = "<group>"; };
@@ -66,10 +67,10 @@
 		97E1688A1CFDE5D100CFC6DF /* HappyPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HappyPlace.swift; path = TheETProject/HappyPlace.swift; sourceTree = "<group>"; };
 		97E1688B1CFDE5D100CFC6DF /* HappyPlace+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HappyPlace+CoreDataProperties.swift"; path = "TheETProject/HappyPlace+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		97E1688E1CFDEA1C00CFC6DF /* HappyPlace+Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HappyPlace+Store.swift"; path = "TheETProject/HappyPlace+Store.swift"; sourceTree = "<group>"; };
+		97E176E51CFF31F400153B8C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		97FBDDF21CD808E200F6E118 /* TheETProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheETProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FBDDF51CD808E200F6E118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97FBDDF71CD808E200F6E118 /* HappyPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyPlacesViewController.swift; sourceTree = "<group>"; };
-		97FBDDFA1CD808E200F6E118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97FBDDFC1CD808E200F6E118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97FBDDFF1CD808E200F6E118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97FBDE011CD808E200F6E118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 		970D25501CE9BF560046100B /* Custom cells */ = {
 			isa = PBXGroup;
 			children = (
+				975E2B161CFF25D5002DA868 /* HappyPlacesTableViewCell.swift */,
 				97463F781CE200FC00233EF3 /* PlaceTableViewCell.swift */,
 			);
 			name = "Custom cells";
@@ -182,17 +184,17 @@
 			isa = PBXGroup;
 			children = (
 				97FBDDF51CD808E200F6E118 /* AppDelegate.swift */,
-				97E1687E1CFDDF6E00CFC6DF /* TheETProject.xcdatamodeld */,
 				97463F821CE2699B00233EF3 /* View Controllers */,
 				97E168891CFDE52F00CFC6DF /* CoreData Models */,
 				970D254F1CE9BF060046100B /* Models */,
 				970D25551CEB2B9E0046100B /* Api Controllers */,
 				979D41521CF5C55C001B596C /* Data Providers */,
 				970D25501CE9BF560046100B /* Custom cells */,
-				97FBDDF91CD808E200F6E118 /* Main.storyboard */,
+				97E176E51CFF31F400153B8C /* Main.storyboard */,
 				97FBDDFC1CD808E200F6E118 /* Assets.xcassets */,
 				97FBDDFE1CD808E200F6E118 /* LaunchScreen.storyboard */,
 				97FBDE011CD808E200F6E118 /* Info.plist */,
+				97E1687E1CFDDF6E00CFC6DF /* TheETProject.xcdatamodeld */,
 			);
 			path = TheETProject;
 			sourceTree = "<group>";
@@ -288,9 +290,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E176E61CFF31F400153B8C /* Main.storyboard in Resources */,
 				97FBDE001CD808E200F6E118 /* LaunchScreen.storyboard in Resources */,
 				97FBDDFD1CD808E200F6E118 /* Assets.xcassets in Resources */,
-				97FBDDFB1CD808E200F6E118 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +324,7 @@
 				97463F751CE1FFC200233EF3 /* FindPlaceViewController.swift in Sources */,
 				97FBDDF61CD808E200F6E118 /* AppDelegate.swift in Sources */,
 				97E1688F1CFDEA1C00CFC6DF /* HappyPlace+Store.swift in Sources */,
+				975E2B171CFF25D5002DA868 /* HappyPlacesTableViewCell.swift in Sources */,
 				97463F7D1CE2044700233EF3 /* WeatherViewController.swift in Sources */,
 				97E1688C1CFDE5D100CFC6DF /* HappyPlace.swift in Sources */,
 				97463F731CE1FEFD00233EF3 /* SettingsViewController.swift in Sources */,
@@ -349,15 +352,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		97FBDDF91CD808E200F6E118 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				97FBDDFA1CD808E200F6E118 /* Base */,
-				97463F871CE378C600233EF3 /* es */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		97FBDDFE1CD808E200F6E118 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

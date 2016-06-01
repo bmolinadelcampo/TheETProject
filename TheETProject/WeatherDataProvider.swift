@@ -11,10 +11,10 @@ import Foundation
 class WeatherDataProvider
 {
     var weather: Weather!
-    var place: Place!
+    var place: HappyPlace!
     var dateFormatter: NSDateFormatter!
     
-    init(place: Place, weather: Weather)
+    init(place: HappyPlace, weather: Weather)
     {
         self.weather = weather
         self.place = place
@@ -22,7 +22,8 @@ class WeatherDataProvider
         self.dateFormatter = NSDateFormatter()
         
         print(dateFormatter.timeZone.name)
-        dateFormatter.timeZone = place.timeZone
+        
+//        dateFormatter.timeZone = place.timeZone
         dateFormatter.dateFormat = "hh:mm a"
     }
     
