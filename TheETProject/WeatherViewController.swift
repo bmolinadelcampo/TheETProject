@@ -21,8 +21,9 @@ class WeatherViewController: ContentViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         apiController = WeatherApiController()
+        
         loadData()
     }
     
