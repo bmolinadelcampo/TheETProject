@@ -130,7 +130,7 @@
                             <constraint firstItem="cP2-Pm-tLX" firstAttribute="top" secondItem="BbB-GE-V46" secondAttribute="bottom" constant="86" id="ynb-kD-KYW"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="aTg-26-ZMk"/>
+                    <tabBarItem key="tabBarItem" title="" id="aTg-26-ZMk"/>
                     <navigationItem key="navigationItem" title="Title" id="yOX-pd-eik"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhH-3d-iZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -169,7 +169,7 @@
                             <constraint firstItem="IOo-Rg-9mi" firstAttribute="top" secondItem="1Ji-o1-FU1" secondAttribute="bottom" constant="123" id="Zfr-jJ-fF1"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Ca6-15-uNV"/>
+                    <tabBarItem key="tabBarItem" title="" id="Ca6-15-uNV"/>
                     <navigationItem key="navigationItem" title="Title" id="b2e-XO-AcL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HlD-s4-Hwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,13 +189,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxF-UE-ruG">
-                                <rect key="frame" x="214" y="217" width="172" height="23"/>
+                                <rect key="frame" x="214" y="232" width="172" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place, Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XU2-R7-6ce">
-                                <rect key="frame" x="250" y="250" width="100" height="22"/>
+                                <rect key="frame" x="250" y="265" width="100" height="22"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="18"/>
                                 <color key="textColor" red="0.91764705879999997" green="0.36862745099999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -207,9 +207,8 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="vf6-8k-lvh"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hFx-ra-kQ0">
-                                <rect key="frame" x="210" y="60" width="180" height="137"/>
-                                <color key="backgroundColor" red="0.9882352941176471" green="0.93333333333333335" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hFx-ra-kQ0">
+                                <rect key="frame" x="210" y="75" width="180" height="137"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="1a4-5S-oP4"/>
                                     <constraint firstAttribute="width" secondItem="hFx-ra-kQ0" secondAttribute="height" multiplier="197:150" id="8TO-zz-Knd"/>
@@ -227,13 +226,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgm-oO-fhQ">
-                                <rect key="frame" x="40" y="307" width="64" height="33.5"/>
+                                <rect key="frame" x="40" y="322" width="64" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCl-bc-Meu">
-                                <rect key="frame" x="505.5" y="307" width="54.5" height="33.5"/>
+                                <rect key="frame" x="505.5" y="322" width="54.5" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -262,13 +261,13 @@
                             <constraint firstItem="hFx-ra-kQ0" firstAttribute="centerX" secondItem="8qh-Eu-Vgw" secondAttribute="centerX" id="Qqb-fM-BcA"/>
                             <constraint firstItem="hFx-ra-kQ0" firstAttribute="width" secondItem="8qh-Eu-Vgw" secondAttribute="width" multiplier="0.3" id="UgA-uf-yei"/>
                             <constraint firstItem="1s4-3p-LyU" firstAttribute="top" secondItem="nWi-dJ-J4m" secondAttribute="bottom" id="Y6T-H3-MZM"/>
-                            <constraint firstItem="hFx-ra-kQ0" firstAttribute="top" secondItem="nWi-dJ-J4m" secondAttribute="bottom" constant="40" id="aFM-5P-akv"/>
+                            <constraint firstItem="hFx-ra-kQ0" firstAttribute="top" secondItem="nWi-dJ-J4m" secondAttribute="bottom" constant="55" id="aFM-5P-akv"/>
                             <constraint firstItem="QCl-bc-Meu" firstAttribute="baseline" secondItem="Mgm-oO-fhQ" secondAttribute="baseline" id="bu6-yZ-H2m"/>
                             <constraint firstItem="dxF-UE-ruG" firstAttribute="centerX" secondItem="hFx-ra-kQ0" secondAttribute="centerX" id="vSh-19-naH"/>
                             <constraint firstItem="dxF-UE-ruG" firstAttribute="top" secondItem="hFx-ra-kQ0" secondAttribute="bottom" constant="20" id="yeO-wq-3QL"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="vqh-lx-Y3s"/>
+                    <tabBarItem key="tabBarItem" title="" id="vqh-lx-Y3s"/>
                     <navigationItem key="navigationItem" title="Title" id="piZ-nR-Zmc"/>
                     <connections>
                         <outlet property="CurrentTemperatureLabel" destination="Mgm-oO-fhQ" id="ga3-RW-bAi"/>
@@ -512,6 +511,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="pGn-Lc-Kp3"/>
-        <segue reference="vf6-8k-lvh"/>
+        <segue reference="Gc1-wB-uJu"/>
     </inferredMetricsTieBreakers>
 </document>

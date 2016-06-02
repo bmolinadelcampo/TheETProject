@@ -44,6 +44,17 @@ class WeatherViewController: ContentViewController {
             
             self.dataProvider = WeatherDataProvider(place: self.place, weather: weather)
             
+            self.apiController.fetchIconForWeather(weather) { (icon) -> Void in
+                
+                if let icon = icon {
+                    
+                    dispatch_async(dispatch_get_main_queue()) { [unowned self] in
+                        
+                        self.weatherDescriptionImageView.image = icon
+                    }
+                }
+            }
+
             dispatch_async(dispatch_get_main_queue()) { [unowned self] in
                 
                 self.populateLabels()

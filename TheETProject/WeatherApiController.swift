@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 let autocompleteUrl = "http://autocomplete.wunderground.com/aq?query="
 let apiUrl = "http://api.wunderground.com/api"
@@ -89,6 +90,30 @@ class WeatherApiController {
         task.resume()
     }
     
+    func fetchIconForWeather(weather: Weather, completion: (icon: UIImage?) -> Void) {
+        
+        if let url = weather.iconUrl {
+            
+            let task = session.dataTaskWithURL(url) { (data, response, error) -> Void in
+                
+                if let data = data {
+                    
+                    completion(icon: UIImage(data: data))
+                    
+                } else {
+                    
+                    completion(icon: nil)
+                }
+            }
+            
+            task.resume()
+            
+        } else {
+            
+            completion(icon: nil)
+        }
+        
+    }
     // MARK - Compose url methods
     
     private func composeUrlForPlace(place: HappyPlace) -> NSURL?
